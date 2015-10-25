@@ -3,7 +3,7 @@ require 'compass'
 http_path = "/"
 css_dir = "styles"
 sass_dir = "css"
-images_dir = "img"
+images_dir = "build/development/img"
 javascripts_dir = "js"
 
 # output_style = :expanded or :nested or :compact or :compressed

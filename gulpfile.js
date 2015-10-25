@@ -10,7 +10,7 @@ var
 /* --------- paths --------- */
 
 var
-paths = {
+    paths = {
         jade : {
             location    : 'components/jade/**/*.jade',
             compiled    : 'components/jade/**/*.jade',
@@ -26,7 +26,7 @@ paths = {
             configFile  : 'config.rb',
             cssFolder   : 'build/development/css',
             scssFolder  : 'components/scss',
-            imgFolder   : 'img'
+            imgFolder   : 'build/development/img'
         },
 
         browserSync : {
