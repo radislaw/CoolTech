@@ -1,0 +1,38 @@
+@mixin get-sprite ($map, $icon) {
+	$sprite-image: sprite-file($map, $icon);
+	$sprite-map: sprite-url($map);
+	$sprite-position: sprite-position($map, $icon);
+
+	background: $sprite-map $sprite-position no-repeat;
+
+	$sprite-height: image-height($sprite-image);
+	$sprite-width: image-width($sprite-image);
+
+	height: $sprite-height;
+	width: $sprite-width;
+}
+
+.socials__link {
+	display: block;
+	//width: 50px;
+	//height: 50px;
+}
+
+//$icons-layout: horizontal;
+//$icons-spacing: 70px;
+//@import "icons/*.png";
+
+$socials: vk, tw, fb;
+
+
+$socials-map: sprite-map('icons/*.png', $spacing: 70px);
+
+
+@each $social in $socials {
+	.socials__link_#{$social} {
+		@include get-sprite($socials-map, $social);
+	}
+}
+
+
+
