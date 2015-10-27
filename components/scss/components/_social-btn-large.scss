@@ -1,0 +1,53 @@
+@import "../utilities/sprite";
+
+.social-btn-large__list {
+    padding: 0;
+    margin: 0;
+    margin-left: -15px;
+    padding-right: 5px;
+}
+
+.social-btn-large {
+    font-size: 0;
+    margin-bottom: 35px;
+    display: block;
+
+    .facebook {
+        @include get-sprite($map, facebook-large)
+    }
+
+    .vk {
+        @include get-sprite($map, vk-large)
+    }
+
+    .twitter {
+        @include get-sprite($map, twitter-large)
+    }
+}
+
+.social-btn-large {
+
+    .facebook:hover {
+        @include get-sprite($map, facebook-large-hover)
+    }
+
+    .vk:hover {
+        @include get-sprite($map, vk-large-hover)
+    }
+
+    .twitter:hover {
+        @include get-sprite($map, twitter-large-hover)
+    }
+}
+
+.social-btn-large__item {
+    list-style: none;
+    display: inline-block;
+    margin-left: 26px;
+}
+
+.social-btn-large__link{
+    display: block;
+}
+
+//

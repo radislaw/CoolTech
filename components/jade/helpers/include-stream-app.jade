@@ -1,0 +1,15 @@
+case page
+	when 'oldIE-js'
+		<!--[if lt IE 8]>
+		//- inject:oldIE.js
+		script(src="/app/bower/modernizr/modernizr.js")
+		script(src="/app/bower/html5shiv/dist/html5shiv.min.js")
+		script(src="/app/js/oldIE/respond.js")
+		//- endinject
+		<![endif]-->
+
+
+	when 'vendorNotBower-js'
+		//- inject:vendorNotBower.js
+		script(src="/app/js/vendorNotBower/script.js")
+		//- endinject

@@ -1,0 +1,62 @@
+doctype html
+html(lang="ru-Ru")
+	include head
+	body
+		<!--[if lt IE 8]>
+		<p class="browserhappy">Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+		<![endif]-->
+		div.page-body.clearfix
+			header.g-header
+				div.contacts-panel
+					div.container.clearfix
+						//Social btn
+						include ../components/social-btn
+
+						//Phone
+						include ../components/phone
+
+						//Location
+						include ../components/location
+
+
+				div.logo-panel
+					div.container.clearfix
+						//Logo
+						include ../components/logo
+
+						//Helpers
+						include ../components/helper
+						+helper(["Карта проезда", "История заказов", "Корзина"])
+
+						//Search
+						include ../components/search
+
+				div.nav-panel
+					//Navigation
+					include ../components/navigation
+					+nav(["Планшеты", "Мобильные телефоны", "Mp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"], 1)
+
+				div.container.clearfix.crumbs-panel
+					//Crumbs
+					include ../components/crumbs
+					+crumbs(["Главная", "Каталог"])
+
+
+			section.g-mainer.container
+				block content
+
+		footer.g-footer
+			div.container.clearfix
+				include ../components/footer-logo
+				div.footer-right-column
+					include ../components/social-btn-large
+
+					include ../components/footer-navigation
+					+footer-nav(["Планшеты", "Мобильные телефоны", "Mp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"])
+			include ../components/copyright
+
+		script(src = "bower_components/jquery/jquery.min.js")
+		script(src = "bower_components/columnizer/src/jquery.columnizer.js")
+		script(src = "bower_components/jquery-ui/jquery-ui.min.js")
+		script(src = "bower_components/select2/dist/js/select2.min.js")
+		script(src = "js/script.js")

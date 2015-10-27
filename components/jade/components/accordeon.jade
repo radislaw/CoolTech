@@ -1,0 +1,66 @@
+div.accordeon
+   ul.accordeon__list
+      li.accordeon__item
+         a.accordeon__trigger Наличие в магазинах
+         div.accordeon__item__toggle
+            ul.accordeon__list-radio.list-radio
+               -var items = ["Во всех магазинах", "В ближайшем ко мне магазине"]
+                  each item in items
+                     li.list-radio__item
+                        label.list-radio__label
+                           input(type = "radio").list-radio__input-radio--origin
+                           div.list-radio__input-radio--fake
+                           div.list-radio__item__title= item
+
+      li.accordeon__item
+         a.accordeon__trigger Бренды
+         div.accordeon__item__toggle
+            ul.accordeon__list-check.list-check
+               -var items = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
+               each item in items
+                  li.list-check__item
+                     label.list-check__label
+                        input(type = "checkbox").list-check__input-check--origin
+                        div.list-check__input-check--fake
+                        div.list-check__item__title= item
+            a.accordeon__reset-filter Сбросить фильтр
+
+      li.accordeon__item
+         a.accordeon__trigger Цена
+         div.accordeon__item__toggle
+            div.wrap-price-fields.price-slider.clearfix
+               div.price-field.price-field_start
+                  span.price-field__text от
+                  input(type="text", value="0").price-field__input
+               div.price-field.price-field_end
+                  span.price-field__text до
+                  input(type="text", value="26000").price-field__input
+            div.slider-interval
+               div.slider-interval__range
+               div.slider-interval__caret_start-wrap.ui-slider-handle
+                  div.slider-interval__caret.slider-interval__caret_start
+               div.slider-interval__caret_end-wrap.ui-slider-handle
+                  div.slider-interval__caret.slider-interval__caret_end
+
+      li.accordeon__item
+         a.accordeon__trigger Цвет
+         div.accordeon__item__toggle
+            ul.accordeon__list-colors.list-colors
+               -var colors = ["white", "gray", "black", "dark-blue", "red", "yellow", "orange", "green", "blue", "purple", "pink", "brown"]
+               each item in colors
+                  li.list-colors__item
+                     a(href="#", data-color=item).list-colors__link
+
+      li.accordeon__item
+         a.accordeon__trigger Операционные
+         div.accordeon__item__toggle
+            ul.accordeon__list-check.list-check
+               -var items = ["Android", "iOS", "Windows Mobile", "Symbian", "Custom"]
+               each item in items
+                  li.list-check__item
+                     label.list-check__label
+                        input(type = "checkbox").list-check__input-check--origin
+                        div.list-check__input-check--fake
+                        div.list-check__item__title= item
+            a.accordeon__reset-filter Сбросить фильтр
+               

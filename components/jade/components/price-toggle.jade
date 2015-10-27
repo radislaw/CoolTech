@@ -1,0 +1,6 @@
+mixin price-toggle(items, activeIndex)
+   nav.price-toggle
+      ul.price-toggle__list
+         each item, index in items
+            li(class="price-toggle__item " + ((activeIndex == index) ? 'price-toggle__item_active' : ''))
+               a(href="#" class= "price-toggle__link")= item

@@ -13,7 +13,7 @@ var
     paths = {
         jade : {
             location    : 'components/jade/**/*.jade',
-            compiled    : 'components/jade/**/*.jade',
+            compiled    : 'components/jade/*.jade',
             destination : 'build/development'
         },
 

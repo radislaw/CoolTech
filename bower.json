@@ -1,0 +1,12 @@
+{
+  "name": "manifest",
+  "version": "0.1.0",
+  "description": "my first bower project",
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "modernizr": "2.8.3",
+    "jquery": "1.8",
+    "jquery-placeholder": "~2.1.3"
+  }
+}

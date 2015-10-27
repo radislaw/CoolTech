@@ -1,0 +1,6 @@
+mixin crumbs(items)
+   div.crumbs
+      ul.crumbs__list
+         each item in items
+            li.crumbs__item
+               a(href="#").crumbs__link= item

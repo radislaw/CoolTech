@@ -1,0 +1,52 @@
+@import "../utilities/sprite";
+
+.social-btn__list {
+    padding: 0;
+    margin: 0;
+    margin-left: -15px;
+}
+
+.social-btn {
+    float: left;
+    font-size: 0;
+
+    .facebook {
+        @include get-sprite($map, facebook)
+    }
+
+    .vk {
+        @include get-sprite($map, vk)
+    }
+
+    .twitter {
+        @include get-sprite($map, twitter)
+    }
+}
+
+.social-btn {
+
+    .facebook:hover {
+        @include get-sprite($map, facebook-hover)
+    }
+
+    .vk:hover {
+        @include get-sprite($map, vk-hover)
+    }
+
+    .twitter:hover {
+        @include get-sprite($map, twitter-hover)
+    }
+
+}
+
+.social-btn__item {
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.social-btn__link{
+    display: block;
+}
+
+//
